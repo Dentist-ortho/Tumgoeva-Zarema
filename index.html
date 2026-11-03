@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тумгоева Зарема Союповна | Врач-ортодонт</title>
+  <!-- Подключение библиотеки для иконок -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #6b21a8; /* Глубокий фиолетовый */
+      --bg: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --light-bg: #f5edff;
+      --therapy-bg: #f0f9ff;
+    }
+
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    header { padding: 40px 0; border-bottom: 1px solid #f3f4f6; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .nav a { text-decoration: none; color: var(--text); margin-left: 30px; font-weight: 500; }
+
+    /**
+     * ⚙️ ШАПКА С ВАШИМ ФОТОГРАФИЕЙ И БЕЛЫМ ТЕКСТОМ
+     *
+     * 1. Картинка становится фоном.
+     * 2. Добавлено затемнение (rgba), чтобы белый текст был читаемым.
+     * 3. Текст стал белым.
+     */
+    .hero {
+      position: relative;
+      padding-top: 10rem; /* Высота от верха до текста */
+      padding-bottom: 5rem;
+      overflow: hidden;
+    }
+
+    /* Полупрозрачная пленка поверх картинки */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1; /* Под текстом */
+      background-image: url('portrait.jpg'); /* ВАША КАРТИНКА! */
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.9);
+    }
+
+    /* Белый текст */
+    .hero h1,
+    .hero p,
+    .hero .btn {
+      color: white !important;
+    }
+
+    /****** ОСТАЛЬНОЙ КОД НЕ ИЗМЕНИЛСЯ ******/
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin: 0 10px;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #581c87;
+    }
+
+    section { padding: 80px 0; }
+    h2 { text-align: center; font-size: 2.25rem; margin-bottom: 50px; }
+
+    .grid { display: grid; gap: 30px; }
+    @media screen and (min-width: 768px) { .grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); } }
+
+    .card { border: 1px solid #f3f4f6; border-radius: 8px; padding: 20px; transition: box-shadow 0.3s; }
+    .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+    .skills-list { columns: 2; list-style-type: '✓ '; padding-left: 20px; }
+    .skills-list li { margin-bottom: 8px; }
+
+    .therapy-card { background: var(--therapy-bg); border-left: 4px solid #0284c7; }
+
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; text-align: center; }
+    .contact-item { padding: 20px; border: 1px solid #f3f4f6; border-radius: 8px; }
+    .contact-item a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 1.1rem; }
+    .contact-item a:hover { text-decoration: underline; }
+
+    .social-icons { display: flex; justify-content: center; gap: 25px; margin-top: 20px; }
+    .social-icons i { color: var(--text); font-size: 1.5rem; transition: color 0.3s; }
+    .social-icons i:hover { color: var(--primary); }
+
+    footer { background: #f9fafb; padding: 40px 0; text-align: center; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div><strong>ЗТ</strong></div>
+    <div>
+      <a href="#about">Обо мне</a>
+      <a href="#experience">Опыт работы</a>
+      <a href="#skills">Навыки</a>
+      <a href="#contacts">Контакты</a>
+    </div>
+  </div>
+</header>
+
+<!-- Шапка с вашим фото -->
+<section class="hero">
+  <div class="container">
+    <h1>Тумгоева Зарема Союповна</h1>
+    <p>Врач стоматолог-ортодонт</p>
+    <p>Специализация: Ортодонтия, исправление прикуса, детская и взрослая ортодонтия.</p>
+    
+    <!-- ✅ ПРАВИЛЬНЫЕ ССЫЛКИ НА КНОПКАХ -->
+    <a href="#contacts" class="btn">Связаться</a> <!-- Эта кнопка теперь работает правильно -->
+    <a download href="resume.pdf" class="btn" style="background: #4b5563;">Скачать резюме</a>
+  </div>
+</section>
+
+<!-- Новый блок "Обо мне", собранный из вашего опыта -->
+<section id="about" class="container">
+  <h2>Обо мне</h2>
+  <div style="text-align: center; font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px;">
+    Приветствую!
+    
+    Меня зовут **Зарема Союповна**. Моя цель как врача-ортодонта — не просто выровнять зубы, а подарить вам здоровую улыбку, которая будет радовать долгие годы. 
+
+    За время своей практики я успешно завершила лечение более **50 пациентов** с патологиями прикуса различной сложности. В работе я использую как классические методы лечения брекет-системами (*Damon*, *3M*, самолигирующие системы), так и современные цифровые технологии (*Invisalign*, клиническое планирование). Особое внимание уделяю детской ортодонтии, используя пластинки, аппараты Марко Роса и частичные брекеты *(4х2)*.
+
+    Я постоянно повышаю свою квалификацию, посещая курсы по биомеханике, микроимплантам и цифровой ортодонтии. Умею находить подход к требовательным взрослым пациентам и снимать страх у детей во время приема.
+  </div>
+  
+  <!-- Оставляем карточки об образовании -->
+  <div class="grid">
+    <div class="card">
+      <h3>Базовое образование</h3>
+      <p><strong>ВУЗ:</strong> Ставропольский государственный медицинский университет Стгму</p>
+      <p><strong>Специальность:</strong> «Стоматология» (2020 г.)</p>
+    </div>
+    <div class="class="card">
+      <h3>Ординатура</h3>
+      <p><strong>Место:</strong> Ставропольский государственный медицинский университет</p>
+      <p><strong>Кафедра:</strong> Ортодонтии</p>
+      <p><strong>Годы:</strong> 2020–2022</p>
+    </div>
+  </div>
+</section>
+
+<!-- Блок опыта, переписанный из резюме -->
+<section id="experience" class="container">
+  <h2>Мой путь в стоматологии</h2>
+
+  <div class="card">
+    <h3>Ведущий врач-стоматолог-ортодонт | 2022 – настоящее время</h3>
+    <p><strong>Клиники:</strong> Нова (Магас), Алания клиник (Магас), Генезис (Назрань)</p>
+    <ul>
+      <li>Проведение первичных консультаций, комплексная диагностика и составление индивидуальных планов лечения.</li>
+      <li>Расчет и анализ ТРГ, ОПТГ, КЛКТ, выполнение 3D-антропометрического анализа.</li>
+      <li>Лечение зубочелюстных аномалий любой сложности у детей и взрослых с использованием съемной и несъемной аппаратуры.</li>
+      <li>Работа со всеми видами брекет-систем (лигатурные, самолигирующие) и элайнерами.</li>
+      <li>Ортодонтическая подготовка пациентов к имплантации, протезированию и ортогнатической хирургии.</li>
+      <li>Повысила поток пациентов в клинику на 50% за счет внедрения современных протоколов.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Курсы повышения квалификации</h3>
+    <ul>
+      <li>28 February – 1 March, 2026: Ideal and Real Orthodontics. Classic Approaches and New Opportunities For Perfect Results. Prof. Marco Rosa Georgia,Tbilisi</li>
+      <li>2025 г.: Концепция нивелирования с помощью микроимплантатов (Морозов М.)</li>
+      <li>2024 г.: Расширение лимитов классической ортодонтии (Нурдинов И.Р.), Междисциплинарное взаимодействие в ортодонтии (Кораблев А.), Биомеханика (Шихгафизов Курбан)</li>
+      <li>2022 г.: Хирургически ассистированное ортодонтическое лечение (Гизоева Екатерина), Эффективность использования самолигирующей брекет системы (Зернов К.А.)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Блок навыков -->
+<section id="skills" class="container">
+  <h2>Профессиональные навыки</h2>
+
+  <!-- Терапевтическая стоматология (без изменений) -->
+  <div class="card therapy-card" style="margin-bottom: 40px;">
+    <h3>Терапевтическая стоматология</h3>
+    <ul class="skills-list">
+      <li>Лечение кариеса (включая глубокий кариес)</li>
+      <li>Отбеливание зубов (офисное и домашнее)</li>
+      <li>ICON лечение (инфильтрация кариеса без сверления)</li>
+      <li>Профессиональная гигиена полости рта (УЗ-скейлер, AirFlow)</li>
+    </ul>
+  </div>
+
+  <!-- Ортодонтия — новый блок в стиле терапии -->
+  <div class="card therapy-card">
+    <h3>Ортодонтия и цифровые протоколы</h3>
+    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+      <div>
+        <h4>Диагностика и планирование</h4>
+        <ul class="skills-list" style="column-count: 1;">
+          <li>Анализ ТРГ (телерентгенограммы)</li>
+          <li>Расчет и анализ КЛКТ</li>
+          <li>Создание и анализ диагностических моделей</li>
+          <li>Фотометрия лица и полости рта</li>
+          <li>Цифровое планирование лечения (Set-up)</li>
+          <li>3D-цефалометрия</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Брекет-системы и механика</h4>
+        <ul class="skills-list" style="column-count: 1;">
+          <li>Прямая фиксация брекетов</li>
+          <li>Эджуайз-техника (0.018 и 0.022)</li>
+          <li>Damon System</li>
+          <li>Лингвальная техника (Incognito, WIN)</li>
+          <li>Лечение с использованием мини-винтов (TADs)</li>
+          <li>Коррекция 2-го класса по Энглю</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Элайнеры и цифровая ортодонтия</h4>
+        <ul class="skills-list" style="column-count: 1;">
+          <li>Работа с системами Invisalign, Flexiligner, Star Smile</li>
+          <li>3D-моделирование перемещений зубов</li>
+          <li>Аттачменты и межчелюстные тяги на элайнерах</li>
+          <li>Дистализация и протоколы расширения</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Детская ортодонтия и смежные протоколы</h4>
+        <ul class="skills-list" style="column-count: 1;">
+          <li>Ортодонтическая подготовка к протезированию</li>
+          <li>Лечение детей (пластинки, трейнеры, 2х4)</li>
+          <li>Коррекция дисфункции ВНЧС</li>
+          <li>Миофункциональная терапия</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 🔥 ОБНОВЛЕННЫЙ БЛОК КОНТАКТОВ -->
+<section id="contacts" class="container">
+  <h2>Контакты</h2>
+  <div class="contact-info">
+    <i class="fa-solid fa-square-phone"></i>
+    <span>Телефон: <a href="tel:+79640563898">+7 (964) 056-38-98</a></span>
+  </div>
+  <div class="contact-info">
+    <i class="fa-solid fa-envelope-open-text"></i>
+    <span>Почта: <a href="mailto:grethanmorgan@xmail.ru">grethanmorgan@xmail.ru</a></span>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/dr.tumgoeva.z/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://t.me/zar_tmg" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2024 Тумгоева Зарема Союповна. Врач-ортодонт.</p>
+  </div>
+</footer>
+
+</body>
+</html>
